@@ -25,5 +25,5 @@ echo "Signature size: " $(stat -c%s "$signature") " bytes"
 echo "Signature:"
 cat "${signature}"
 oneline_sig=$(sed -e '/^----/d' "$signature" |tr -d '\n')
-printf "\n\n-----------------------------------\nQR Code:\n%s%s\n" "$raw" "$oneline_sig"
-printf "%s%s" "$raw" "$oneline_sig" > "$finalqrcode"
+printf "\n\n-----------------------------------\nQR Code:\n%s|%s\n" "$raw" "$oneline_sig"
+printf "%s|%s" "$raw" "$oneline_sig" > "$finalqrcode"
