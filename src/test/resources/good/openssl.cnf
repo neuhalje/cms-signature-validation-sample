@@ -1,0 +1,13 @@
+[req]
+distinguished_name = req_distinguished_name
+req_extensions = v3_req
+prompt = no
+[req_distinguished_name]
+C = DE
+ST = NRW
+L = Bonn
+OU = "Demo Post"
+OU = PLAPP
+CN = qr-code-signer
+[v3_req]
+keyUsage = digitalSignature, nonRepudiation
