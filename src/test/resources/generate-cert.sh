@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
 source config.inc
-cd "$basedir"
+cd "$basedir/$1"
 
-cat <<-EOF > "$basedir"/openssl.cnf
+cat <<-EOF > openssl.cnf
 [req]
 distinguished_name = req_distinguished_name
 req_extensions = v3_req

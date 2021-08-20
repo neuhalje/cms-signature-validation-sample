@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
 source config.inc
-cd "$basedir"
+cd "$basedir/$1"
+
 
 openssl cms \
 -verify \
 -certfile "$certfile" \
 -CAfile "$certfile" \
--inkey "$keyfile" \
 -binary \
 -content "$data" \
 -inform pem \
